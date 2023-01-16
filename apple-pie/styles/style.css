@@ -7,7 +7,7 @@
 }
 
 h2 {
-    margin: 40px 0 10px;
+    margin: 40px 0;
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -45,6 +45,7 @@ header {
 
 .info-img {
     align-self: center;
+    margin: 20px 0px;
 }
 
 #intro p {
@@ -60,8 +61,12 @@ header {
 }
 
 #ingredients ul {
-    list-style-type: "- ";
+    list-style-type: none;
     margin-left: 1rem;
+}
+
+#ingredients ul > li::before {
+content: "- ";
 }
 
 /* The brackets for list style seem to be tricky, ended up using a method found on
@@ -79,13 +84,12 @@ easier way: https://stackoverflow.com/questions/22530982/html-numbering-with-bra
 #directions ol>li:before {
     content: counter(list) ") ";
     counter-increment: list;
-
 }
 
-#directions {
+/* #directions {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-}
+} */
