@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+h2 {
+    margin: 40px 0 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+section {
+    margin: auto;
+
+    border: 0;
+    border-top: 2px;
+    border-style: solid;
+    border-color: grey;
+    width: 80%;
+
+}
+
+header {
+    background-image: url('../images/apple-pie.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    aspect-ratio: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
+
+.info-img {
+    align-self: center;
+}
+
+#intro p {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+
+#ingredients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ingredients ul {
+    list-style-type: "- ";
+    margin-left: 1rem;
+}
+
+/* The brackets for list style seem to be tricky, ended up using a method found on
+stack overflow, but that seems to advanced for what we learned so far, there must be an
+easier way: https://stackoverflow.com/questions/22530982/html-numbering-with-brackets */
+#directions ol {
+    margin-left: 1rem;
+    counter-reset: list;
+}
+
+#directions ol > li {
+    list-style: none;
+}
+
+#directions ol>li:before {
+    content: counter(list) ") ";
+    counter-increment: list;
+
+}
+
+#directions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
